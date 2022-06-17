@@ -1,0 +1,100 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hotels_hotellook",
+  "info": {
+    "singularName": "hotel-hotellook",
+    "pluralName": "hotels-hotellook",
+    "displayName": "Hotel Hotellook",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "stars": {
+      "type": "integer"
+    },
+    "pricefrom": {
+      "type": "decimal"
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "popularity": {
+      "type": "integer"
+    },
+    "propertyType": {
+      "type": "integer"
+    },
+    "checkIn": {
+      "type": "time"
+    },
+    "checkOut": {
+      "type": "time"
+    },
+    "distance": {
+      "type": "decimal"
+    },
+    "photoCount": {
+      "type": "integer"
+    },
+    "photos": {
+      "type": "json"
+    },
+    "photosByRoomType": {
+      "type": "json"
+    },
+    "yearOpened": {
+      "type": "integer"
+    },
+    "yearRenovated": {
+      "type": "integer"
+    },
+    "cntRooms": {
+      "type": "integer"
+    },
+    "cntSuites": {
+      "type": "integer"
+    },
+    "cntFloors": {
+      "type": "integer"
+    },
+    "facilities": {
+      "type": "json"
+    },
+    "shortFacilities": {
+      "type": "json"
+    },
+    "location": {
+      "type": "json"
+    },
+    "name": {
+      "type": "json"
+    },
+    "address": {
+      "type": "json"
+    },
+    "link": {
+      "type": "string"
+    },
+    "poi_distance": {
+      "type": "json"
+    },
+    "cityId": {
+      "type": "string"
+    },
+    "description": {
+      "type": "json"
+    },
+    "slug": {
+      "type": "json"
+    },
+    "hotel_location": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hotel-location.hotel-location",
+      "inversedBy": "hotel_hotellooks"
+    }
+  }
+}

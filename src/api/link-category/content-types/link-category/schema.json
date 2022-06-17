@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "link_categories",
+  "info": {
+    "singularName": "link-category",
+    "pluralName": "link-categories",
+    "displayName": "Link Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "link_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::link-category.link-category"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "slugOld": {
+      "type": "string"
+    },
+    "estado": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::estado.estado",
+      "inversedBy": "link_categories"
+    }
+  }
+}

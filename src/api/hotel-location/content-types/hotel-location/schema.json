@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hotel_locations",
+  "info": {
+    "singularName": "hotel-location",
+    "pluralName": "hotel-locations",
+    "displayName": "Hotel Location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "numhoteles": {
+      "type": "integer"
+    },
+    "hotellookId": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::location.location",
+      "inversedBy": "hotel_location"
+    },
+    "hotel_hotellooks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::hotel-hotellook.hotel-hotellook",
+      "mappedBy": "hotel_location"
+    }
+  }
+}

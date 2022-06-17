@@ -1,0 +1,33 @@
+{
+  "name": "strapi-turista-2022",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-graphql": "^4.1.11",
+    "@strapi/plugin-i18n": "^4.1.11",
+    "@strapi/plugin-users-permissions": "^4.1.11",
+    "@strapi/strapi": "^4.1.11",
+    "i": "^0.3.7",
+    "mysql": "2.18.1",
+    "npm": "^8.10.0",
+    "strapi": "^3.6.10"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "8ce7fe8a-fd86-4563-8f37-a5683c1f6cef"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
